@@ -1,0 +1,58 @@
+<%- include('../Partials/head.html') %>
+    All Post Are Here:
+    <div class="row p-3">
+    <!-- <div class="row p-3"> -->
+    <% posts.forEach(({file,title,category,_id,date,imagePath},index)=> { %>
+            <div class="card d-flex col-2 m-3" style="width: 18rem;">
+                <div>
+                    <ul class="p-3 list-group-flush">
+                        <li class="list-group-item">
+                            <%= file %>
+                        </li>
+                        <li class="list-group-item">
+                            <%= category %>
+                        </li>
+                        <li class="list-group-item">
+                            <%= title %>
+                        </li>
+                        <li class="list-group-item">
+                            <%= date %>
+                        </li>
+                        <img src="postimages/<%= imagePath %> "/>
+                    </ul>
+                </div>
+                <div class="card-body d-flex">
+                    <form action="/edit/<%=_id%> " method='get'>
+                        <button class='bg-green-600 m-2 p-2 mx-auto rounded'>Edit</button>
+                    </form>&nbsp;&nbsp;&nbsp;
+                    <form action="/delete/<%=_id%>" method='POST'>
+                        <button class='bg-red-600 m-2 p-2 mx-auto rounded'>Delete</button>
+                    </form>&nbsp;&nbsp;&nbsp;
+                    <form action="/view/<%=_id%> " method='GET'>
+                        <button class='bg-blue-700 m-2 p-2 mx-auto rounded'>View</button>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="d-flex ">
+                    
+                </div> -->
+            <!-- </div> -->
+
+        </div>
+        <!-- </div> -->
+        <% }) %>
+            <!-- </div> -->
+<%- include('../Partials/bottom.html') %>
+
+                <!-- <img style="width:30%;height:6vh;" src" alt=""><h3></h3>
+        <h3></h3>
+        <h3>/h3>
+       <div class="d-flex ">
+        <a href="/edit/<>"class='bg-green-500 m-2 p-2 mx-auto rounded'>Edit</a>
+        <form action="/delete/ "method='POST'>
+            <button class='bg-red-500 m-2 p-2 mx-auto rounded'>Delete</button>
+        </form>
+        <form action="/view/ "method='GET'>
+            <button class='bg-yellow-500 m-2 p-2 mx-auto rounded'>View</button>
+        </form>
+       </div> -->

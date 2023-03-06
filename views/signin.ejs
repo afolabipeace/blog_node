@@ -1,0 +1,40 @@
+<%- include('../Partials/head.html')  %> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-space-x-2">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#"><img src="images/zendesklogo.png"alt=""style='width:15%;'>ZENDESK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="shadow mx-auto p-2 d-flex">
+                    <div class="col-4 p-5">
+                        <h1 style="color: rgb(19, 72, 74);font-size: 25px;" class="fw-bold text-mono mb-3">Signin to Zendesk</h1>
+                        <h5 class="text-gray-600"style='font-size:12px;'>Your Zendesk subdomain</h5>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control"placeholder='Subdomain'>
+                            <span class="input-group-text">.zendesk.com</span>
+                        </div>
+                        <span class="float-end mb-4"style='font-size:12px;'>Dont't remember your company's url</span>
+                        <button style="background-color: rgb(24, 80, 74);" class="btn text-white text-center mb-5 w-100">SIGNIN</button>
+                        <button class="btn text-center w-100"id='new' style="border:2px solid rgb(19, 72, 74);">New Zendesk? Start your free trial</button>
+                    </div>
+                    <div class="col-5 d-flex" style='background-color:rgb(218, 249, 245);'>
+                        <div class="col-5 p-3">
+                            <H2 class="text-mono fw-bold mb-3"style='font-size:30px;color:rgb(24, 80, 74);'>What's New at Zendesk</H2>
+                            <p class="mb-4">Get this quarter's announcements, plus a recap of 2022's biggest product hits.</p>
+                            <button style="background-color: rgb(24, 80, 74);" class=" btn text-white text-center text-mono mb-3 w-100">LEARN MORE</button>
+                        </div>
+                        <div class="col-7 position-relative"style=''>
+                            <img style="height: 50vh;"class="position-absolute p-5" src="images/zendek.webp" alt="">
+                            <img style="width:20%;" class="position-absolute top-0 start-50"src="images/zendesk2.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('../Partials/bottom.html')  %> 

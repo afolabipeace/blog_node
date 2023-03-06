@@ -1,0 +1,16 @@
+<%- include('../Partials/head.html')  %> 
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, ut eaque quod iure eos autem unde vitae nobis rem? At a impedit perferendis hic? Doloribus delectus aspernatur velit id explicabo vero cumque dolor eos voluptatem, perferendis accusantium numquam repudiandae esse officiis quae quis. Blanditiis vel impedit fugit porro. Inventore deserunt mollitia quod magni, beatae autem numquam quas provident dolorum excepturi sequi ipsum molestias. Obcaecati, ratione. Totam sapiente fuga reprehenderit nisi explicabo odit eligendi minus sequi consectetur debitis! Explicabo consequatur aperiam cumque fugit. Commodi, optio veniam eum repellendus amet qui unde nam? Perferendis esse ullam atque distinctio vel adipisci dolores.
+
+    <div class="bg-gray-700 text-mono text-white p-10 text-center">
+        My Name Is <%= user.name %> 
+        <br>
+        <%= user.school %> 
+        <br>
+        <%= user.dept %> 
+<br>
+
+        <% numbers.forEach(element => { %>
+         <span class="p-1 m-1 shadow bg-slate-200 rounded text-slate-600"><%= element %> </span>
+        <% }) %>
+    </div>
+    <%- include('../Partials/bottom.html')  %> 

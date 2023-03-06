@@ -1,0 +1,21 @@
+<%- include('../Partials/head.html') %> 
+   Edit Post here:
+   <div class="container">
+      <div class="row">
+         <div class="col-4 m-2 shadow p-3 mx-auto">
+               <div className='text-center shadow mx-auto col-4 p-3 m-3'>
+                  <form action="/edit-post/<%= post._id %>  "method='post'>
+                     <!-- <input type="hidden"value='' name="id"> -->
+                     <input name="category"value='<%= post.category %>' placeholder="Category" className='form-control' />
+                     <input name="title"value='<%= post.title %> ' placeholder="Title" className='form-control' />
+                     <input name="more"value='<%= post.more %> ' placeholder="More" className='form-control' />
+                     <input name="file"value='<%= post.file %> ' type="file" className='form-control'>
+                     <input type="datetime-local"value='<%= post.date %> ' name="date" placeholder="Date" className='form-control' />
+                     <button type="submit" value="edit-post" className='btn btn-success'>Update</button>
+                  </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+<%- include('../Partials/bottom.html')  %> 

@@ -1,0 +1,22 @@
+<%- include('../Partials/head.html') %>
+   Add new Post here:
+   <div class="container">
+      <div class="row">
+         <div class="mx-auto col-4">
+            <div className='shadow mx-auto col-4 '>
+               <form class="text-center" method="POST" action="/new-post"enctype='multipart/form-data'>
+                  <!-- <div className=' shadow mx-auto col-4 '> -->
+                  <input name="category" placeholder="Category" className='form-control' />
+                  <input name="title" placeholder="Title" className='form-control' />
+                  <input name="more" placeholder="More" className='form-control' />
+                  <input name="picture" type="file" className='form-control'>
+                  <input type="datetime-local" name="date" placeholder="Date" className='form-control' />
+                  <button type="submit" className='btn btn-success  '>Register</button>
+                  <!-- </div> -->
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <%- include('../Partials/bottom.html') %>
