@@ -4,7 +4,6 @@ const path = require("path");
 const dotenv = require("dotenv")
 const mongoose = require("mongoose");
 const router = require('./routers/router');
-const { validatePost } = require('./middlewares/postMiddleware');
 dotenv.config();
 
 const http = require('http');
@@ -70,7 +69,7 @@ mongoose.connect(process.env.URI,(error)=>{
 
 //DOTENV
 
-app.set('view engine',('ejs'))
+// app.set('view engine',('ejs'))
 
 app.use(express.static(path.join(__dirname,'assets')))
 // app.use(bodyparser.urlencoded({extended:true}));
@@ -82,6 +81,6 @@ app.use(express.urlencoded({extended:true}));
 app.use('/',router)
 
 
-server.listen(PORT,()=>{
+app.listen(PORT,()=>{
     console.log(`Server is Listening${PORT}`)
 })

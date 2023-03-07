@@ -7,7 +7,7 @@ dotenv.config()
 
 const register = (req, res) => {
     const { firstname, lastname, email, password } = req.body
-    User.create({ firstname, lastname, email, password },async (err, data) => {
+    User.create({ firstname, lastname, email, password }, async (err, data) => {
         if (err) {
             console.log(err)
             res.status(500).json({
@@ -15,19 +15,21 @@ const register = (req, res) => {
                 message: 'An Error'
             })
         } else {
+            console.log("yyy");
            try {
-            await sendMail({
-                to:email,
-                subject:'Registration successful',
-                html:`
-                    <div>
-                        <h3 style='font-size:20px'>Welcome</h3>
-                        <p>You are welcome ${firstname} to LifestyleBlog</p>
-                    </div>
-                `
-            });
-           } catch (error) {
+                await sendMail({
+                    to:email,
+                    subject:'Registration successful',
+                    html:`
+                        <div>
+                            <h3 style='font-size:20px'>Welcome</h3>
+                            <p>You are welcome ${firstname} to LifestyleBlog</p>
+                        </div>
+                    `
+                });
+            } catch (error) {
             console.log('An error occured when trying to send email');
+            
            }
             res.json({
                 success: true,
